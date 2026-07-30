@@ -1,0 +1,19 @@
+
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+
+CREATE TABLE predictions (
+    id SERIAL PRIMARY KEY,
+    temperature FLOAT,
+    humidity FLOAT,
+    rainfall FLOAT,
+    wind FLOAT,
+    result VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

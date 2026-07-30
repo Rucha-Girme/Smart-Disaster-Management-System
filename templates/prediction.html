@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Disaster Prediction
+</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:#eef4fb;
+
+min-height:100vh;
+
+}
+
+
+.navbar{
+
+background:linear-gradient(90deg,#198754,#157347);
+
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+}
+
+
+.navbar-brand{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:white!important;
+
+}
+
+
+.main-title{
+
+font-weight:700;
+
+color:#198754;
+
+}
+
+
+.weather-card{
+
+border:none;
+
+border-radius:20px;
+
+overflow:hidden;
+
+background:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+transition:.3s;
+
+}
+
+
+.weather-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+.weather-icon{
+
+font-size:45px;
+
+}
+
+
+.predict-card{
+
+margin-top:35px;
+
+border:none;
+
+border-radius:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+
+.card-header{
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+
+.form-control{
+
+height:55px;
+
+border-radius:12px;
+
+font-size:18px;
+
+}
+
+
+.form-control:focus{
+
+box-shadow:0 0 12px rgba(25,135,84,.4);
+
+border-color:#198754;
+
+}
+
+
+.btn-predict{
+
+background:#198754;
+
+color:white;
+
+height:58px;
+
+font-size:20px;
+
+font-weight:bold;
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+
+.btn-predict:hover{
+
+background:#157347;
+
+transform:scale(1.02);
+
+}
+
+
+.result-card{
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+.footer{
+
+margin-top:60px;
+
+background:#198754;
+
+padding:15px;
+
+text-align:center;
+
+color:white;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+<a class="navbar-brand">
+
+🌍 Smart Disaster Management
+
+</a>
+
+<div>
+
+<a href="/dashboard"
+class="btn btn-light">
+
+← Dashboard
+
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<div class="container py-5">
+
+<div class="text-center mb-5">
+
+<h1 class="main-title">
+
+🤖 AI Disaster Prediction
+
+</h1>
+
+<p class="text-muted fs-5">
+
+Predict disaster risks using
+Machine Learning and Live Weather Data
+
+</p>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<div class="col-md-3">
+
+<div class="card weather-card">
+
+<div class="card-body text-center">
+
+<div class="weather-icon">
+
+🌡
+
+</div>
+
+<h3>
+
+{{ weather.temperature }}°C
+
+</h3>
+
+<p>
+
+Temperature
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="card weather-card">
+
+<div class="card-body text-center">
+
+<div class="weather-icon">
+
+💧
+
+</div>
+
+<h3>
+
+{{ weather.humidity }}%
+
+</h3>
+
+<p>
+
+Humidity
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="card weather-card">
+
+<div class="card-body text-center">
+
+<div class="weather-icon">
+
+🌧
+
+</div>
+
+<h3>
+
+{{ weather.rainfall }} mm
+
+</h3>
+
+<p>
+
+Rainfall
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="card weather-card">
+
+<div class="card-body text-center">
+
+<div class="weather-icon">
+
+🌬
+
+</div>
+
+<h3>
+
+{{ weather.wind }} m/s
+
+</h3>
+
+<p>
+
+Wind Speed
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="alert alert-info mt-4 shadow-sm">
+
+<b>
+
+Current Weather :
+
+</b>
+
+{{ weather.description }}
+
+</div>
+<!-- ================= PREDICTION CARD ================= -->
+
+<div class="card predict-card">
+
+<div class="card-header bg-success text-white text-center">
+
+<i class="fas fa-brain"></i>
+
+Disaster Risk Prediction
+
+</div>
+
+<div class="card-body p-4">
+
+<form method="POST">
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+🌡 Temperature (°C)
+
+</label>
+
+<input
+type="number"
+step="0.1"
+name="temperature"
+class="form-control"
+value="{{ weather.temperature }}"
+required>
+
+</div>
+
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+💧 Humidity (%)
+
+</label>
+
+<input
+type="number"
+step="0.1"
+name="humidity"
+class="form-control"
+value="{{ weather.humidity }}"
+required>
+
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+🌧 Rainfall (mm)
+
+</label>
+
+<input
+type="number"
+step="0.1"
+name="rainfall"
+class="form-control"
+value="{{ weather.rainfall }}"
+required>
+
+</div>
+
+
+<div class="col-md-6 mb-4">
+
+<label class="form-label fw-bold">
+
+🌬 Wind Speed (m/s)
+
+</label>
+
+<input
+type="number"
+step="0.1"
+name="wind"
+class="form-control"
+value="{{ weather.wind }}"
+required>
+
+</div>
+
+</div>
+
+
+<div class="d-grid mt-2">
+
+<button
+type="submit"
+class="btn btn-predict">
+
+<i class="fas fa-robot"></i>
+
+Predict Disaster Risk
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- ================= RESULT ================= -->
+
+{% if result %}
+
+<div class="card result-card mt-5 border-0">
+
+<div class="card-header bg-{{ color }} text-white text-center">
+
+<h3 class="mb-0">
+
+<i class="fas fa-chart-line"></i>
+
+Prediction Result
+
+</h3>
+
+</div>
+
+<div class="card-body text-center py-5">
+
+{% if color=="success" %}
+
+<div style="font-size:70px;">
+
+✅
+
+</div>
+
+{% elif color=="warning" %}
+
+<div style="font-size:70px;">
+
+⚠
+
+</div>
+
+{% else %}
+
+<div style="font-size:70px;">
+
+🚨
+
+</div>
+
+{% endif %}
+
+<h2 class="fw-bold mt-3">
+
+{{ result }}
+
+</h2>
+
+
+{% if color=="success" %}
+
+<p class="text-success fs-5">
+
+Weather conditions are currently safe.
+
+</p>
+
+{% elif color=="warning" %}
+
+<p class="text-warning fs-5">
+
+Please stay alert and monitor weather updates.
+
+</p>
+
+{% else %}
+
+<p class="text-danger fs-5">
+
+Immediate precautions are recommended.
+
+</p>
+
+{% endif %}
+
+</div>
+
+</div>
+
+{% endif %}
+<!-- ================= SAFETY TIPS ================= -->
+
+<div class="row mt-5">
+
+<div class="col-lg-6">
+
+<div class="card border-0 shadow-lg rounded-4">
+
+<div class="card-header bg-warning text-dark fw-bold fs-5">
+
+⚠ Safety Tips
+
+</div>
+
+<div class="card-body">
+
+<div class="mb-3">
+
+<h6>🌧 During Floods</h6>
+
+<ul class="mb-0">
+
+<li>Avoid walking or driving through flooded roads.</li>
+
+<li>Move to higher ground immediately.</li>
+
+<li>Keep important documents in waterproof bags.</li>
+
+</ul>
+
+</div>
+
+<hr>
+
+<div>
+
+<h6>🌪 During Cyclones</h6>
+
+<ul class="mb-0">
+
+<li>Stay indoors and away from windows.</li>
+
+<li>Charge your mobile devices in advance.</li>
+
+<li>Follow official weather advisories.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-6">
+
+<div class="card border-0 shadow-lg rounded-4">
+
+<div class="card-header bg-danger text-white fw-bold fs-5">
+
+🚨 Emergency Contacts
+
+</div>
+
+<div class="card-body">
+
+<div class="d-grid gap-3">
+
+<a href="tel:108" class="btn btn-outline-danger btn-lg">
+
+🚑 Ambulance - 108
+
+</a>
+
+<a href="tel:100" class="btn btn-outline-primary btn-lg">
+
+👮 Police - 100
+
+</a>
+
+<a href="tel:101" class="btn btn-outline-warning btn-lg">
+
+🚒 Fire Brigade - 101
+
+</a>
+
+<a href="/map" class="btn btn-success btn-lg">
+
+🗺 Open Safe Zone Map
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer mt-5">
+
+<div class="container">
+
+<h5 class="mb-2">
+
+🌍 Smart Disaster Management System
+
+</h5>
+
+<p class="mb-1">
+
+AI-Based Disaster Prediction & Emergency Response
+
+</p>
+
+<small>
+
+Powered by Flask • PostgreSQL • Machine Learning • OpenWeather API • Google Maps
+
+</small>
+
+</div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
