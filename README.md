@@ -259,7 +259,7 @@ Predicts disaster risk using Machine Learning based on:
 
 ## 📍 Safe Zone Map
 
-![Map](screenshots/map.png)
+![Map](screenshots/safezone.png)
 
 Google Maps integration to locate nearby:
 
