@@ -1,51 +1,3 @@
- #🌍 Smart Disaster Management System
-
-<p align="center">
-  <img src="Screenshots/banner.png" alt="Smart Disaster Management System Banner" width="100%">
-</p>
-
-### 🚨 AI-Powered Disaster Prediction & Emergency Response System
-
-A *Flask-based web application* that predicts disaster risks using *Machine Learning, provides **live weather information, displays **safe zones using Google Maps*, and assists users during emergencies.
-
----
-
-![Python](https://img.shields.io/badge/Python-3.13-blue?style=for-the-badge&logo=python)
-![Flask](https://img.shields.io/badge/Flask-Web_App-black?style=for-the-badge&logo=flask)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql)
-![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange?style=for-the-badge)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap)
-![OpenWeather](https://img.shields.io/badge/OpenWeather-API-yellow?style=for-the-badge)
-![Google Maps](https://img.shields.io/badge/Google-Maps-success?style=for-the-badge&logo=googlemaps)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-</div>
-
----
-
-# 📌 Project Overview
-
-Natural disasters like *Floods, **Cyclones, and **Heatwaves* can cause severe damage to life and property.
-
-The *Smart Disaster Management System* helps users monitor weather conditions, predict disaster risk using Machine Learning, locate emergency services through Google Maps, and access emergency information from a single platform.
-
-The project combines *Artificial Intelligence, **Weather APIs, **Database Management, and **Interactive Maps* to build a practical disaster management solution.
-
----
-
-# 🌟 Project Highlights
-
-- 🤖 Machine Learning Disaster Prediction
-- 🌦️ Live Weather using OpenWeather API
-- 📍 Google Maps Safe Zone Integration
-- 🔐 Secure User Authentication
-- 📊 Dashboard with Prediction History
-- 🗄️ PostgreSQL Database
-- 📱 Responsive Bootstrap 5 Interface
-- 🚨 Emergency Contact Module
-- 🔒 Password Hashing using Werkzeug
-- 💻 Built using Flask Framework
-
 ---
 
 # ✨ Features
@@ -62,15 +14,15 @@ The project combines *Artificial Intelligence, **Weather APIs, **Database Manage
 
 - Predicts disaster risk using a trained Machine Learning model
 - Uses:
-  - 🌡️ Temperature
+  - 🌡 Temperature
   - 💧 Humidity
-  - 🌧️ Rainfall
-  - 🌬️ Wind Speed
+  - 🌧 Rainfall
+  - 🌬 Wind Speed
 - Displays Disaster Risk Level
 
 ---
 
-### 🌦️ Live Weather
+### 🌦 Live Weather
 
 - Real-time Weather
 - Temperature
@@ -109,7 +61,7 @@ The project combines *Artificial Intelligence, **Weather APIs, **Database Manage
 
 ---
 
-# 🛠️ Technology Stack
+# 🛠 Technology Stack
 
 | Category | Technologies |
 |-----------|--------------|
@@ -126,7 +78,7 @@ The project combines *Artificial Intelligence, **Weather APIs, **Database Manage
 
 # 📂 Project Structure
 
-text
+```text
 Smart-Disaster-Management-System
 │
 ├── app.py
@@ -155,13 +107,14 @@ Smart-Disaster-Management-System
 │   ├── map.html
 │   └── admin.html
 │
-└── Screenshots/
-
+└── screenshots/
+```
 
 ---
 
 # 🔄 Project Workflow
-text
+
+```text
                  User Login
                       │
                       ▼
@@ -178,7 +131,7 @@ OpenWeather API   ML Prediction   PostgreSQL
           ┌───────────┴───────────┐
           ▼                       ▼
    Safe Zone Map          Emergency Module
-
+```
 
 ---
 
@@ -203,11 +156,10 @@ OpenWeather API   ML Prediction   PostgreSQL
 ✅ Secure Password Encryption
 
 ✅ GitHub Version Control
----
 
 # 📸 Application Screenshots
 
-> *Note:* Replace these placeholder images with screenshots from your application after creating the screenshots folder.
+> **Note:** Replace these placeholder images with screenshots from your application after creating the `screenshots` folder.
 
 ---
 
@@ -249,16 +201,16 @@ Displays weather information and provides quick access to all project modules.
 
 Predicts disaster risk using Machine Learning based on:
 
-- 🌡️ Temperature
+- 🌡 Temperature
 - 💧 Humidity
-- 🌧️ Rainfall
-- 🌬️ Wind Speed
+- 🌧 Rainfall
+- 🌬 Wind Speed
 
 ---
 
 ## 📍 Safe Zone Map
 
-![Map](Screenshots/safezone.png)
+![Map](Screenshots/map.png)
 
 Google Maps integration to locate nearby:
 
@@ -275,9 +227,10 @@ Google Maps integration to locate nearby:
 Provides emergency contact numbers and disaster safety guidelines.
 
 ---
+
 # 🏗️ System Architecture
 
-text
+```text
                     +-----------------------+
                     |      User Browser     |
                     +----------+------------+
@@ -308,13 +261,13 @@ text
                     +-----------------------+
                     | Dashboard & UI Pages  |
                     +-----------------------+
-
+```
 
 ---
 
 # 🤖 Machine Learning Workflow
 
-text
+```text
 Weather Data
      │
      ▼
@@ -334,13 +287,13 @@ Prediction
      │
      ▼
 Risk Level Displayed to User
-
+```
 
 ---
 
-# 🌦️ Weather API Workflow
+# 🌦 Weather API Workflow
 
-text
+```text
 OpenWeather API
         │
         ▼
@@ -352,7 +305,7 @@ Flask Backend
         ▼
 Dashboard
 Prediction Page
-
+```
 
 ---
 
@@ -380,8 +333,6 @@ Prediction Page
 | wind | FLOAT |
 | result | VARCHAR |
 | created_at | TIMESTAMP |
----
-
 # ⚙️ Installation Guide
 
 ## 1️⃣ Clone the Repository
