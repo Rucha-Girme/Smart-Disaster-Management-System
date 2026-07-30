@@ -1,12 +1,12 @@
-# 🌍 Smart Disaster Management System
+ #🌍 Smart Disaster Management System
 
 <p align="center">
-  <img src="screenshots/banner.png" alt="Smart Disaster Management System Banner" width="100%">
+  <img src="Screenshots/banner.png" alt="Smart Disaster Management System Banner" width="100%">
 </p>
 
 ### 🚨 AI-Powered Disaster Prediction & Emergency Response System
 
-A **Flask-based web application** that predicts disaster risks using **Machine Learning**, provides **live weather information**, displays **safe zones using Google Maps**, and assists users during emergencies.
+A *Flask-based web application* that predicts disaster risks using *Machine Learning, provides **live weather information, displays **safe zones using Google Maps*, and assists users during emergencies.
 
 ---
 
@@ -25,22 +25,22 @@ A **Flask-based web application** that predicts disaster risks using **Machine L
 
 # 📌 Project Overview
 
-Natural disasters like **Floods**, **Cyclones**, and **Heatwaves** can cause severe damage to life and property.
+Natural disasters like *Floods, **Cyclones, and **Heatwaves* can cause severe damage to life and property.
 
-The **Smart Disaster Management System** helps users monitor weather conditions, predict disaster risk using Machine Learning, locate emergency services through Google Maps, and access emergency information from a single platform.
+The *Smart Disaster Management System* helps users monitor weather conditions, predict disaster risk using Machine Learning, locate emergency services through Google Maps, and access emergency information from a single platform.
 
-The project combines **Artificial Intelligence**, **Weather APIs**, **Database Management**, and **Interactive Maps** to build a practical disaster management solution.
+The project combines *Artificial Intelligence, **Weather APIs, **Database Management, and **Interactive Maps* to build a practical disaster management solution.
 
 ---
 
 # 🌟 Project Highlights
 
 - 🤖 Machine Learning Disaster Prediction
-- 🌦 Live Weather using OpenWeather API
+- 🌦️ Live Weather using OpenWeather API
 - 📍 Google Maps Safe Zone Integration
 - 🔐 Secure User Authentication
 - 📊 Dashboard with Prediction History
-- 🗄 PostgreSQL Database
+- 🗄️ PostgreSQL Database
 - 📱 Responsive Bootstrap 5 Interface
 - 🚨 Emergency Contact Module
 - 🔒 Password Hashing using Werkzeug
@@ -62,15 +62,15 @@ The project combines **Artificial Intelligence**, **Weather APIs**, **Database M
 
 - Predicts disaster risk using a trained Machine Learning model
 - Uses:
-  - 🌡 Temperature
+  - 🌡️ Temperature
   - 💧 Humidity
-  - 🌧 Rainfall
-  - 🌬 Wind Speed
+  - 🌧️ Rainfall
+  - 🌬️ Wind Speed
 - Displays Disaster Risk Level
 
 ---
 
-### 🌦 Live Weather
+### 🌦️ Live Weather
 
 - Real-time Weather
 - Temperature
@@ -109,7 +109,7 @@ The project combines **Artificial Intelligence**, **Weather APIs**, **Database M
 
 ---
 
-# 🛠 Technology Stack
+# 🛠️ Technology Stack
 
 | Category | Technologies |
 |-----------|--------------|
@@ -126,7 +126,7 @@ The project combines **Artificial Intelligence**, **Weather APIs**, **Database M
 
 # 📂 Project Structure
 
-```text
+text
 Smart-Disaster-Management-System
 │
 ├── app.py
@@ -155,14 +155,13 @@ Smart-Disaster-Management-System
 │   ├── map.html
 │   └── admin.html
 │
-└── screenshots/
-```
+└── Screenshots/
+
 
 ---
 
 # 🔄 Project Workflow
-
-```text
+text
                  User Login
                       │
                       ▼
@@ -179,7 +178,7 @@ OpenWeather API   ML Prediction   PostgreSQL
           ┌───────────┴───────────┐
           ▼                       ▼
    Safe Zone Map          Emergency Module
-```
+
 
 ---
 
@@ -208,13 +207,13 @@ OpenWeather API   ML Prediction   PostgreSQL
 
 # 📸 Application Screenshots
 
-> **Note:** Replace these placeholder images with screenshots from your application after creating the `screenshots` folder.
+> *Note:* Replace these placeholder images with screenshots from your application after creating the screenshots folder.
 
 ---
 
 ## 🏠 Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](Screenshots/home.png)
 
 The landing page introduces the Smart Disaster Management System and provides quick navigation to user authentication.
 
@@ -222,7 +221,7 @@ The landing page introduces the Smart Disaster Management System and provides qu
 
 ## 🔐 Login Page
 
-![Login Page](screenshots/login.png)
+![Login Page](Screenshots/login.png)
 
 Secure login page for registered users with encrypted password authentication.
 
@@ -230,7 +229,7 @@ Secure login page for registered users with encrypted password authentication.
 
 ## 📝 Registration Page
 
-![Registration Page](screenshots/register.png)
+![Registration Page](Screenshots/register.png)
 
 Allows new users to create an account securely.
 
@@ -238,7 +237,7 @@ Allows new users to create an account securely.
 
 ## 📊 Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 
 Displays weather information and provides quick access to all project modules.
 
@@ -246,20 +245,20 @@ Displays weather information and provides quick access to all project modules.
 
 ## 🤖 Disaster Prediction
 
-![Prediction](screenshots/prediction.png)
+![Prediction](Screenshots/prediction.png)
 
 Predicts disaster risk using Machine Learning based on:
 
-- 🌡 Temperature
+- 🌡️ Temperature
 - 💧 Humidity
-- 🌧 Rainfall
-- 🌬 Wind Speed
+- 🌧️ Rainfall
+- 🌬️ Wind Speed
 
 ---
 
 ## 📍 Safe Zone Map
 
-![Map](screenshots/safezone.png)
+![Map](Screenshots/safezone.png)
 
 Google Maps integration to locate nearby:
 
@@ -271,15 +270,14 @@ Google Maps integration to locate nearby:
 
 ## 🚨 Emergency Module
 
-![Emergency](screenshots/emergency.png)
+![Emergency](Screenshots/emergency.png)
 
 Provides emergency contact numbers and disaster safety guidelines.
 
 ---
-
 # 🏗️ System Architecture
 
-```text
+text
                     +-----------------------+
                     |      User Browser     |
                     +----------+------------+
@@ -310,13 +308,13 @@ Provides emergency contact numbers and disaster safety guidelines.
                     +-----------------------+
                     | Dashboard & UI Pages  |
                     +-----------------------+
-```
+
 
 ---
 
 # 🤖 Machine Learning Workflow
 
-```text
+text
 Weather Data
      │
      ▼
@@ -336,13 +334,13 @@ Prediction
      │
      ▼
 Risk Level Displayed to User
-```
+
 
 ---
 
-# 🌦 Weather API Workflow
+# 🌦️ Weather API Workflow
 
-```text
+text
 OpenWeather API
         │
         ▼
@@ -354,7 +352,7 @@ Flask Backend
         ▼
 Dashboard
 Prediction Page
-```
+
 
 ---
 
@@ -388,13 +386,13 @@ Prediction Page
 
 ## 1️⃣ Clone the Repository
 
-```bash
+bash
 git clone https://github.com/Rucha-Girme/Smart-Disaster-Management-System.git
-```
 
-```bash
+
+bash
 cd Smart-Disaster-Management-System
-```
+
 
 ---
 
@@ -402,31 +400,31 @@ cd Smart-Disaster-Management-System
 
 ### Windows
 
-```bash
+bash
 python -m venv venv
-```
+
 
 Activate the virtual environment:
 
-**Command Prompt**
+*Command Prompt*
 
-```bash
+bash
 venv\Scripts\activate
-```
 
-**PowerShell**
 
-```powershell
+*PowerShell*
+
+powershell
 venv\Scripts\Activate.ps1
-```
+
 
 ---
 
 ## 3️⃣ Install Dependencies
 
-```bash
+bash
 pip install -r requirements.txt
-```
+
 
 ---
 
@@ -434,13 +432,13 @@ pip install -r requirements.txt
 
 Create a file named:
 
-```text
+text
 .env
-```
+
 
 Add the following variables:
 
-```env
+env
 DB_HOST=localhost
 DB_NAME=smart_disaster
 DB_USER=postgres
@@ -448,9 +446,9 @@ DB_PASSWORD=your_password
 DB_PORT=5432
 
 OPENWEATHER_API_KEY=your_api_key
-```
 
-> **Important:** Never upload your `.env` file to GitHub. Keep it listed in `.gitignore`.
+
+> *Important:* Never upload your .env file to GitHub. Keep it listed in .gitignore.
 
 ---
 
@@ -458,9 +456,9 @@ OPENWEATHER_API_KEY=your_api_key
 
 Create a PostgreSQL database:
 
-```
+
 smart_disaster
-```
+
 
 Import your SQL script to create the required tables.
 
@@ -468,15 +466,15 @@ Import your SQL script to create the required tables.
 
 ## 6️⃣ Run the Application
 
-```bash
+bash
 python app.py
-```
+
 
 Open your browser:
 
-```
+
 http://127.0.0.1:5000
-```
+
 
 ---
 
@@ -530,15 +528,15 @@ If you'd like to improve this project:
 
 # 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the *MIT License*.
 
-See the `LICENSE` file for details.
+See the LICENSE file for details.
 
 ---
 
 # 👩‍💻 Author
 
-**Rucha Girme**
+*Rucha Girme*
 
 🎓 B.Sc. Computer Science Student
 
@@ -565,8 +563,10 @@ If you found this project useful:
 
 ## ⭐ Thank You for Visiting ⭐
 
-**Smart Disaster Management System**
+*Smart Disaster Management System*
 
 Built using Flask, Machine Learning, PostgreSQL, OpenWeather API, and Google Maps.
 
 </div>
+saksh@ASUS MINGW64 ~/OneDrive/Desktop/Smart disaster-prediction (main)
+$
